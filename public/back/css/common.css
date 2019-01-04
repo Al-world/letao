@@ -49,6 +49,11 @@ a:active {
   top: 0px;
   left: 0px;
   background-color: #222D32;
+  z-index: 9999;
+  transition: all 1s;
+}
+.aside.hidemenu {
+  left: -180px;
 }
 .aside .brand{
   width: 100%;
@@ -60,4 +65,78 @@ a:active {
 .aside .brand a{
   font-size:24px;
   color: #fff;
+}
+.aside .user{
+  width: 180px;
+  height: 180px;
+  padding-top:30px;
+}
+.aside .user img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.aside .user p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.aside .nav li a{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 40px;
+  border-left: 3px solid transparent;
+}
+
+.aside .nav a.current {
+  background-color: #1D1F21;
+  border-left: 3px solid #006699;
+}
+.aside .nav a i {
+  margin-right: 4px;
+}
+.aside .nav .child{
+  display:none;
+}
+.aside .nav .child a{
+  padding-left:60px;
+}
+
+
+.main{
+  padding-left: 180px;
+  padding-top: 50px;
+  height: 2000px;
+  background-color: pink;
+  transition: all 1s;
+}
+.main.hidemenu{
+  padding-left: 0px
+}
+.main .topbar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #3C8DBC;
+  padding-left: 180px;
+  transition: all 1s;
+}
+.topbar.hidemenu {
+  padding-left: 0px;
+}
+.main .topbar a{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
 }
