@@ -45,10 +45,56 @@
             <div class="container-fluid">
                 <ol class="breadcrumb mt_20">
                     <li><a href="index.html">管理系统</a></li>
-                    <li class="active">首页</li>
+                    <li class="active">分类管理</li>
+                    <li class="active">一级分类</li>
                 </ol>
+                <div class="content">
+                    <div class="content">
+                        <button class="btn btn-default" id="addBtn">添加分类</button>
+                        <table class="table table-bordered table-hover mt_20">
+                            <thead>
+                                <tr>
+                                    <th width="20%">序号</th>
+                                    <th width="80%">一级分类名</th>
+                            </thead>
+                            <tbody>
+                               <!-- 挖坑 -->
+                            </tbody>
+                        </table>
+                        <div class="pull-right" >
+                            <ul id="paginator"></ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+        <div class="modal fade" id="addModal" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <!-- 头部 -->
+                <form id="form">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+                </div>
+                <!-- 中间 -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" name="categoryName" class="form-control" placeholder="请输入一级分类名称">
+                      </div>
+                </div>
+                <!-- 底部 -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="submit" class="btn btn-primary" id="addB">添加</button>
+                </div>
+            </form>
+              </div>
+            </div>
+        </div>
+        <!-- 模态框 -->
         <div class="modal fade" id="logoutModal" tabindex="-1">
             <div class="modal-dialog modal-sm">
               <div class="modal-content">
@@ -69,11 +115,23 @@
               </div>
             </div>
         </div>
-    <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-    <!-- <script src="./js/login.js"></script> -->
-    <script src="./js/common.js"></script>
-    <script src="./lib/nprogress/nprogress.js"></script>
+        <script type="text/html" id="fristtpl">
+            {{each rows v i}}
+            <tr>
+                    <td>{{i + 1 + ( page-1) * size }}</td>
+                    <td>{{v.categoryName}}</td>
+                </tr>
+            {{/each}}
+        </script>
+        <script src="./lib/jquery/jquery.min.js"></script>
+        <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+        <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+        <script src="./lib/nprogress/nprogress.js"></script>
+        <script src="./lib/artTemplate/template-web.js"></script>
+        <script src="./lib/echarts/echarts.min.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/isLogin.js"></script>
+        <script src="./js/frist.js"></script>
 </body>
 </html>

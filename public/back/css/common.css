@@ -24,13 +24,13 @@ a:active {
 .red {
   color: #A94442;
 }
-.white{
-  color: #fff
-}
+
 .body_bg {
   background-color: #222D32;
 }
-
+.mt_20{
+  margin-top:20px;
+}
 .panel-title {
   height: 40px;
   line-height: 40px;
@@ -112,8 +112,8 @@ a:active {
 .main{
   padding-left: 180px;
   padding-top: 50px;
-  height: 2000px;
-  background-color: pink;
+  /* height: 2000px;
+  background-color: pink; */
   transition: all 1s;
 }
 .main.hidemenu{
@@ -139,4 +139,17 @@ a:active {
   text-align: center;
   color: #fff;
   font-size: 20px;
+}
+
+.echarts_left,
+.echarts_right {
+  height: 400px;
+  width: 48%;
+  background-color: skyblue;
+}
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  /* 设置单位格内容 垂直对齐方式 */
+  vertical-align: middle;
 }
